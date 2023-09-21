@@ -1,2 +1,5 @@
-HttpExample/node_modules
+*/node_modules
+
+Storage/my_db/*
+
 .DS_Store
