@@ -2,20 +2,13 @@
 $ node server.js
 
 # Write Data To Memory (Does Not Persist After Server Shut Down)
-
 $ curl localhost:8000/memory/foo --header 'content-type: application/json' --data '{"data": "This is FOO data in Memory"}'
-
-$ curl localhost:8000/memory/bar --header 'content-type: application/json' --data '{"data": "This is BAR data in Memory"}'
-
 
 # Read Data From Memory
 $ curl localhost:8000/memory/foo -w "\n"
 
-$ curl localhost:8000/memory/bar -w "\n"
-
-$ curl localhost:8000/memory/foobar -w "\n"
-# Returns 'null'
-
 # Write Data To Disk (Persists After Server Shut Down)
+$ curl localhost:8000/disk/foo --header 'content-type: application/json' --data '{"data": "This is FOO data on Disk"}'
 
 # Read Data From Disk
+$ curl localhost:8000/disk/foo -w "\n"
