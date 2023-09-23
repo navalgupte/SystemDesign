@@ -1,0 +1,26 @@
+# Install Nginx
+brew install nginx
+
+# Default Port In /opt/homebrew/etc/nginx/nginx.conf Set To 8080.
+
+# Start / Stop / Restart / Reload Nginx
+brew services start nginx
+brew services stop nginx
+brew services restart nginx
+brew services reload nginx
+
+# Configure Nginx
+nano /opt/homebrew/etc/nginx/nginx.conf
+
+# Test Nginx Installation (In Web Browser)
+localhost:8080 / 127.0.0.1:8080
+
+# Start Server
+node server.js
+
+# Send Request To Server
+curl localhost:8000/hello
+curl localhost:8080/hello # Via Nginx
+
+
+
